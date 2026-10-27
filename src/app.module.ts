@@ -3,6 +3,7 @@ import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { RankingModule } from './ranking/ranking.module.js';
+import { PollsModule } from './polls/polls.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -17,6 +18,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       serviceId: 'voterank',
     }),
     RankingModule,
+    PollsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
